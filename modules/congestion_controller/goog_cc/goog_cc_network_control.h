@@ -79,7 +79,7 @@ class GoogCcNetworkController : public NetworkControllerInterface {
 
   // used for Mustang [start]
   DataRate last_target_rate = DataRate::Zero();
-  void OnDiffFeedbackFalg(DiffUpadte diffmsg) override;
+  void OnDiffFeedbackFlag(DiffUpadte diffmsg) override;
   int max_diff_length = 60;
   bool diff_flag = true;
   bool ack_flag = true;

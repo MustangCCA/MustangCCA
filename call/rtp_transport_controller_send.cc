@@ -563,7 +563,7 @@ void RtpTransportControllerSend::OnReceivedDiffRequest(int32_t diff){
   task_queue_.PostTask([this,diffmsg]() {
     RTC_DCHECK_RUN_ON(&task_queue_);
     if (controller_){
-      controller_->OnDiffFeedbackFalg(diffmsg);
+      controller_->OnDiffFeedbackFlag(diffmsg);
     }
   });
 }

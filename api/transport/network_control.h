@@ -98,7 +98,7 @@ class NetworkControllerInterface {
   ABSL_MUST_USE_RESULT virtual NetworkControlUpdate OnNetworkStateEstimate(
       NetworkStateEstimate) = 0;
   // mustang add it
-  virtual void    OnDiffFeedbackFalg(DiffUpadte) = 0;
+  virtual void    OnDiffFeedbackFlag(DiffUpadte) = 0;
   // mustang end it
 };
 

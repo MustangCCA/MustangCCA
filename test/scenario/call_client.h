@@ -55,7 +55,7 @@ class NetworkControleUpdateCache : public NetworkControllerInterface {
   NetworkControlUpdate OnNetworkStateEstimate(
       NetworkStateEstimate msg) override;
 
-  void OnDiffFeedbackFalg(DiffUpadte diffmsg) override;
+  void OnDiffFeedbackFlag(DiffUpadte diffmsg) override;
   NetworkControlUpdate update_state() const;
 
  private:

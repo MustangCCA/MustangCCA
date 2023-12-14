@@ -404,7 +404,7 @@ void GoogCcNetworkController::UpdateCongestionWindowSize() {
 }
 // mustang add it
 // OnReceivedDiffRequest
-void GoogCcNetworkController::OnDiffFeedbackFalg(DiffUpadte diffmsg){
+void GoogCcNetworkController::OnDiffFeedbackFlag(DiffUpadte diffmsg){
   // 我们队列最多放120个
   if(diff_recorder.size() < 120)
     diff_recorder.push_back(diffmsg.diff);
@@ -784,9 +784,6 @@ PacerConfig GoogCcNetworkController::GetPacingRates(Timestamp at_time) const {
   DataRate pacing_rate =
       std::max(min_total_allocated_bitrate_, last_loss_based_target_rate_) *
       pacing_factor_;
-  if (drl_flag)
-    pacing_rate = std::max(min_total_allocated_bitrate_, 
-        DataRate::KilobitsPerSec(drl_decision)) * pacing_factor_;
   DataRate padding_rate =
       std::min(max_padding_rate_, last_pushback_target_rate_);
   PacerConfig msg;

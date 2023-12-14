@@ -77,7 +77,7 @@ class RttBasedBackoff {
 class SendSideBandwidthEstimation {
  public:
   // used for gcc-beta[ICC 2019] [start]
-  bool gcc_beta_falg = false;
+  bool gcc_beta_flag = false;
   // 1200 60
   // 1000 80
   float K_phi = 1000.0;

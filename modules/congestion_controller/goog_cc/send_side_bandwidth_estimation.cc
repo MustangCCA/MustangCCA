@@ -518,7 +518,7 @@ void SendSideBandwidthEstimation::UpdateEstimate(Timestamp at_time) {
         loss_based_bandwidth_estimator_v2_.GetBandwidthEstimate();
     // add gcc-beta here
     auto p_current = B_phi - rtt_ms - K_phi*loss_rate;
-    if (gcc_beta_falg == false || loss_rate > 0.05 || p_current <= 0) {
+    if (gcc_beta_flag == false || loss_rate > 0.05 || p_current <= 0) {
       new_bitrate = std::min(new_bitrate, delay_based_limit_);
     }
     UpdateTargetBitrate(new_bitrate, at_time);

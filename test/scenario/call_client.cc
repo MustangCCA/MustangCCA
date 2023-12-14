@@ -141,7 +141,7 @@ NetworkControlUpdate NetworkControleUpdateCache::OnNetworkStateEstimate(
 }
 
 // mustang add it
-void NetworkControleUpdateCache::OnDiffFeedbackFalg(DiffUpadte diffmsg){
+void NetworkControleUpdateCache::OnDiffFeedbackFlag(DiffUpadte diffmsg){
   //return Update(controller_->OnDiffFeedbackFlag(diffmsg));
   return ;
 }
